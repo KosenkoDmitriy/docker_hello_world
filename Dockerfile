@@ -1,13 +1,22 @@
-FROM alpine:3.4
+FROM python:3.6
 
-RUN apk --update add nginx php5-fpm && \
-    mkdir -p /var/log/nginx && \
-    touch /var/log/nginx/access.log && \
-    mkdir -p /run/nginx
+# Add code
+ADD starter /srv/starter
+WORKDIR /srv/starter
 
-ADD www /www
-ADD nginx.conf /etc/nginx/
-ADD php-fpm.conf /etc/php5/php-fpm.conf
+# Install application requirements
+#RUN apt-get update -y && apt-get install -y binutils libproj-dev gdal-bin && apt-get clean
+RUN pip3 install uwsgi virtualenv
+RUN virtualenv -p python3.6 /venv --no-site-packages
+RUN /venv/bin/pip3 install -r /srv/starter/requirements.txt
 
-EXPOSE 80
-CMD php-fpm -d variables_order="EGPCS" && (tail -F /var/log/nginx/access.log &) && exec nginx -g "daemon off;"
+# uWSGI will listen on this port
+EXPOSE 8000
+
+ENV DJANGO_SETTINGS_MODULE=Runur.settings
+
+# Call collectstatic (customize the following line with the minimal environment variables needed for manage.py to run):
+#RUN DATABASE_URL=none /venv/bin/python manage.py collectstatic --noinput
+
+#CMD ["./start.sh"]
+CMD ["/usr/local/bin/uwsgi", "--emperor", "/srv/starter/uwsgi_docker.ini"]
