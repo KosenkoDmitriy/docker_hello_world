@@ -1,2 +1,2 @@
 django==1.9.9
-uwsgi
+#uwsgi==2.0.15
