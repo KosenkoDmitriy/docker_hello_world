@@ -2,3 +2,5 @@ webapp:
   build: .
   ports:
     - "8000:8000"
+  env_file:
+    - ./starter/envs/local.env

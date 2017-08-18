@@ -13,12 +13,12 @@ DATABASES = {
 }
 
 STATIC_ROOT = '/srv/starter/static/'
-#
-# STATICFILES_FINDERS = [
-#     'django.contrib.staticfiles.finders.FileSystemFinder',
-#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-# ]
-#
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
 # STATICFILES_DIRS = [
-#     "/srv/starter/static",
+#     "/srv/starter/Runur/static",
 # ]

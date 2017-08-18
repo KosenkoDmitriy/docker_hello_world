@@ -12,15 +12,10 @@ RUN /venv/bin/pip3 install -r /srv/starter/requirements.txt
 
 # uWSGI will listen on this port
 #EXPOSE 8000
+#ENV DJANGO_SETTINGS_MODULE=Runur.settings.dev
 
-ENV DJANGO_SETTINGS_MODULE=Runur.settings.dev
+ENTRYPOINT ["/srv/starter/start.sh"]
 
-# Call collectstatic (customize the following line with the minimal environment variables needed for manage.py to run):
-#RUN DATABASE_URL=none /venv/bin/python manage.py collectstatic --noinput
-RUN /venv/bin/python manage.py migrate --noinput
-RUN /venv/bin/python manage.py collectstatic --noinput
-
-#CMD ["./start.sh"]
 CMD ["/usr/local/bin/uwsgi", "--emperor", "/srv/starter/uwsgi_docker.ini"]
 #CMD ["/usr/local/bin/uwsgi", "--ini", "/srv/starter/uwsgi_docker.ini"]
 
