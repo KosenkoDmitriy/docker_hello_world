@@ -5,7 +5,8 @@ REGION=us-west-2
 REPOSITORY_NAME=hello-world
 CLUSTER=getting-started
 FAMILY=`sed -n 's/.*"family": "\(.*\)",/\1/p' taskdef.json`
-NAME=`sed -n 's/.*"name": "\(.*\)",/\1/p' taskdef.json`
+#NAME=`sed -n 's/.*"name": "\(.*\)",/\1/p' taskdef.json`
+NAME=docker-hello-world
 SERVICE_NAME=${NAME}-service
 
 #Store the repositoryUri as a variable
