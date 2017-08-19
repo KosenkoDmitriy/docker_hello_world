@@ -12,7 +12,7 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT = '/srv/starter/static/'
+STATIC_ROOT = '/srv/starter/static'
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
