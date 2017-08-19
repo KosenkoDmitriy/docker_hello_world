@@ -1,0 +1,21 @@
+<head>
+  <title>Programs</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Programs</h1>
+    </header>
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="task">
+  <li>{{name}} ( {{tags}} )</li>
+</template>
