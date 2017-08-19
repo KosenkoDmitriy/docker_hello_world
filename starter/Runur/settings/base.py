@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # runur app root (./starter/Runur/
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__name__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -125,7 +126,7 @@ TEMPLATES = [
             # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
             # Always use forward slashes, even on Windows.
             # Don't forget to use absolute paths, not relative paths.
-            os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
+            os.path.join(PROJECT_ROOT, 'templates').replace('\\', '/'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -264,9 +265,15 @@ BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+MEDIA_URL = '/media/'
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'starter/static')
+
 STATICFILES_DIRS = [
-    os.path.join(os.path.dirname(BASE_DIR), 'Runur/static'),
+    #os.path.join(os.path.dirname(BASE_DIR), 'Runur/static'), # ./starter/Runur/static
+    os.path.join(BASE_DIR, 'static'), # ./starter/Runur/static
+    #os.path.join(os.path.dirname(PROJECT_ROOT), 'starter/Runur/static'), # ./starter/Runur/static
 ]
 
 STATICFILES_FINDERS = (
@@ -283,8 +290,6 @@ BOWER_INSTALLED_APPS = (
     'jquery-ui',
     'bootstrap'
 )
-
-MEDIA_URL = '/media/'
 
 ORGS_SLUGFIELD = 'autoslug.fields.AutoSlugField'
 
