@@ -5,7 +5,7 @@ ADD starter /srv/starter
 WORKDIR /srv/starter
 
 # Install application requirements
-#RUN apt-get update -y && apt-get install -y binutils libproj-dev gdal-bin && apt-get clean
+RUN apt-get update -y && apt-get install -y binutils libproj-dev gdal-bin && apt-get clean
 RUN pip3 install uwsgi virtualenv
 RUN virtualenv -p python3.6 /venv --no-site-packages
 RUN /venv/bin/pip3 install -r /srv/starter/requirements.txt
