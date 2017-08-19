@@ -6,8 +6,8 @@ TASKDEF=taskdef_dev
 REGION=us-west-2
 REPOSITORY_NAME=hello-world
 CLUSTER=getting-started
-FAMILY=`jq ".family" ${TASKDEF}.json`
-NAME=`jq ".containerDefinitions[].name" ${TASKDEF}.json`
+FAMILY=`jq -r ".family" ${TASKDEF}.json`
+NAME=`jq -r ".containerDefinitions[].name" ${TASKDEF}.json`
 SERVICE_NAME=${NAME}-service
 
 #Store the repositoryUri as a variable
