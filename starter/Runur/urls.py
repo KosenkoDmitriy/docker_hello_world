@@ -30,7 +30,6 @@ from rest_framework.documentation import include_docs_urls
 from dashing.utils import router
 from rest_framework_jwt.views import obtain_jwt_token
 from API import views
-from Runur.views import MeteorModels
 
 from rest_framework_raml.renderers import RAMLRenderer, RAMLDocsRenderer
 from rest_framework_swagger.renderers import OpenAPIRenderer, SwaggerUIRenderer

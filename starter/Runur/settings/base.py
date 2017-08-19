@@ -268,3 +268,25 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(os.path.dirname(BASE_DIR), 'Runur/static'),
 ]
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'djangobower.finders.BowerFinder',
+)
+
+##BOWER
+BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'Runur', 'components')
+
+BOWER_INSTALLED_APPS = (
+    'jquery',
+    'jquery-ui',
+    'bootstrap'
+)
+
+MEDIA_URL = '/media/'
+
+ORGS_SLUGFIELD = 'autoslug.fields.AutoSlugField'
+
+GOOGLE_MAP_API_KEY = ''
+
