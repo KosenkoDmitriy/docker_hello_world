@@ -51,6 +51,10 @@
                     "value": "runur"
                 },
                 {
+                    "name": "PG_USER",
+                    "value": "runur"
+                },
+                {
                     "name": "PG_PWD",
                     "value": "P0stGr3$P45$W0rdD"
                 },
@@ -63,20 +67,12 @@
                     "value": "5432"
                 },
                 {
-                    "name": "PG_PWD",
-                    "value": "P0stGr3$P45$W0rdD"
-                },
-                {
                     "name": "HAYSTACK_URL",
                     "value": "http://127.0.0.1:9200/"
                 },
                 {
                     "name": "HAYSTACK_INDEX_NAME",
                     "value": "haystack"
-                },
-                {
-                    "name": "PG_PWD",
-                    "value": "P0stGr3$P45$W0rdD"
                 },
                 {
                     "name": "REDIS_STREAM_HOST",
