@@ -60,7 +60,7 @@
                 },
                 {
                     "name": "PG_PORT",
-                    "value": 5432
+                    "value": "5432"
                 },
                 {
                     "name": "PG_PWD",
@@ -84,11 +84,11 @@
                 },
                 {
                     "name": "REDIS_STREAM_PORT",
-                    "value": 6379
+                    "value": "6379"
                 },
                 {
                     "name": "REDIS_STREAM_DB",
-                    "value": 0
+                    "value": "0"
                 },
                 {
                     "name": "REDIS_STREAM_PWD",
