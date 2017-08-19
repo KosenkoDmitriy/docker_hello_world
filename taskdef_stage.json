@@ -1,9 +1,9 @@
 {
-    "family": "docker-hello-world",
+    "family": "docker-backend-stage",
     "containerDefinitions": [
         {
             "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-            "name": "docker-hello-world",
+            "name": "docker-backend-stage",
             "cpu": 10,
             "memory": 256,
             "essential": true,

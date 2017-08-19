@@ -1,9 +1,9 @@
 {
-    "family": "docker-hello-world",
+    "family": "docker-backend-prod",
     "containerDefinitions": [
         {
             "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-            "name": "docker-hello-world",
+            "name": "docker-backend-prod",
             "cpu": 10,
             "memory": 256,
             "essential": true,
