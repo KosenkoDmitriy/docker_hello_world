@@ -54,6 +54,6 @@ STREAM_REDIS_CONFIG = {
     },
 }
 
-DEFAULT_FILE_STORAGE = os.environ.get('DEFAULT_FILE_STORAGE', '') # 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = os.environ.get('STATICFILES_STORAGE', '') # 'storages.backends.s3boto3.S3Boto3Storage' # To allow django-admin.py collectstatic to automatically put your static files in your bucket
-AWS_S3_CUSTOM_DOMAIN = os.environ.get('AWS_S3_CUSTOM_DOMAIN', '')
+#DEFAULT_FILE_STORAGE = os.environ.get('DEFAULT_FILE_STORAGE', '') # 'storages.backends.s3boto3.S3Boto3Storage'
+#STATICFILES_STORAGE = os.environ.get('STATICFILES_STORAGE', '') # 'storages.backends.s3boto3.S3Boto3Storage' # To allow django-admin.py collectstatic to automatically put your static files in your bucket
+#AWS_S3_CUSTOM_DOMAIN = os.environ.get('AWS_S3_CUSTOM_DOMAIN', '')
