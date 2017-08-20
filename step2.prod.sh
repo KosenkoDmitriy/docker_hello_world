@@ -1,7 +1,7 @@
 #!/bin/bash
 #Constants
-TASKDEF=taskdef_dev
-#TASKDEF=taskdef_prod
+#TASKDEF=taskdef_dev
+TASKDEF=taskdef_prod
 #TASKDEF=taskdef_stage
 REGION=us-west-2
 REPOSITORY_NAME=hello-world
