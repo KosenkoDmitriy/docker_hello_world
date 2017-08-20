@@ -32,15 +32,15 @@
                 },
                 {
                     "name": "ALLOWED_HOST2",
-                    "value": "dev.runur.net"
-                },
-                {
-                    "name": "ALLOWED_HOST3",
                     "value": "stage.runur.net"
                 },
                 {
+                    "name": "ALLOWED_HOST3",
+                    "value": ""
+                },
+                {
                     "name": "ALLOWED_HOST4",
-                    "value": "www.runur.net"
+                    "value": ""
                 },
                 {
                     "name": "PG_BACKEND",
@@ -56,11 +56,11 @@
                 },
                 {
                     "name": "PG_PWD",
-                    "value": "P0stGr3$P45$W0rdD"
+                    "value": "ESyons55"
                 },
                 {
                     "name": "PG_HOST",
-                    "value": "runur-server-dev.cszghbpq5kn0.us-west-2.rds.amazonaws.com"
+                    "value": "runur-servers-tage.cszghbpq5kn0.us-west-2.rds.amazonaws.com"
                 },
                 {
                     "name": "PG_PORT",
