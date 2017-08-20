@@ -40,7 +40,7 @@
                 },
                 {
                     "name": "ALLOWED_HOST4",
-                    "value": "www.runur.net"
+                    "value": "*.runur.net"
                 },
                 {
                     "name": "PG_BACKEND",
