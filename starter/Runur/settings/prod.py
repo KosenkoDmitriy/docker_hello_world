@@ -1,5 +1,5 @@
 from .base import *
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [ os.environ['ALLOWED_HOST'], os.environ['ALLOWED_HOST2'], os.environ['ALLOWED_HOST3'], os.environ['ALLOWED_HOST4']  ]
 SECRET_KEY = os.environ['SECRET_KEY'] #'^dptwi-z99yej6$=pzz+8k30iv0+!$bn_k1(qcu#=$7@cc^4o9'
